@@ -186,7 +186,7 @@ nav {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
