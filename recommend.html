@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Companion</title>
+    <link rel="icon" type="image/x-icon" href="css/icon.webp">
+    <link rel="stylesheet" href="css/styles_recommend.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="brand">Agro Companion</div>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="detect.html">Soil Detection</a>
+                <a href="info.html">Crop Info</a>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Main content -->
+    <main>
+        <div class="form-container">
+            <h2>Crop Recommendation</h2>
+            <form id="crop-recommendation-form">
+                
+                <label for="soil">Soil Type:</label>
+                <select id="soil" name="soil" required>
+                    <option value="Alluvial Soil">Alluvial Soil</option>
+                    <option value="Black Soil">Black Soil</option>
+                    <option value="Red Soil">Red Soil</option>
+                    <option value="Yellow Soil">Yellow Soil</option>
+                    <option value="Laterite Soil">Laterite Soil</option>
+                    <option value="Arid Soil">Arid Soil</option>
+                    <option value="Mountain Soil">Mountain Soil</option>
+                </select>
+
+                <label for="season">Season:</label>
+                <select id="season" name="season" onchange="updateMonthOptions()">
+                    <option value="NA">Select Season</option>
+                    <option value="Kharif">Kharif</option>
+                    <option value="Rabi">Rabi</option>
+                    <option value="Year long">Year long</option>
+                </select>
+
+                <label for="ph">pH Level (0-10): </label>
+                <input type="number" id="ph" name="ph" min="0" max="10" step="0.1" value="7" required>
+
+                <label for="rainfall">Rainfall (0-500cm): <small>(Optional)</small></label>
+                <input type="number" id="rainfall" name="rainfall" min="0" max="500" placeholder="NA">
+
+                <label for="temperature">Temperature (0-50°C): <small>(Optional)</small></label>
+                <input type="number" id="temperature" name="temperature" min="0" max="50" placeholder="NA">
+
+                <label for="humidity">Humidity (0-100%): <small>(Optional)</small></label>
+                <input type="number" id="humidity" name="humidity" min="0" max="100" placeholder="NA">
+
+                <label for="nitrogen">Nitrogen (1-100): <small>(Keep 0 if not available)</small></label>
+                <input type="number" id="nitrogen" name="nitrogen" min="0" max="100" value="0">
+
+                <label for="phosphorus">Phosphorus (1-100): <small>(Keep 0 if not available)</small></label>
+                <input type="number" id="phosphorus" name="phosphorus" min="0" max="100" value="0">
+
+                <label for="potassium">Potassium (1-100): <small>(Keep 0 if not available)</small></label>
+                <input type="number" id="potassium" name="potassium" min="0" max="100" value="0">
+
+                <label for="state">State: <small>(required if rainfall data not available)</small></label>
+                <select id="state" name="state" onchange="updateAreaOptions()">
+                    <option value="NA">NA</option>
+                    <option value="ANDAMAN AND NICOBAR ISLANDS">Andaman and Nicobar Islands</option>
+                    <option value="ARUNACHAL PRADESH">Arunachal Pradesh</option>
+                    <option value="ASSAM">Assam</option>
+                    <option value="MEGHALAYA">Meghalaya</option>
+                    <option value="MANIPUR">Manipur</option>
+                    <option value="MIZORAM">Mizoram</option>
+                    <option value="NAGALAND">Nagaland</option>
+                    <option value="TRIPURA">Tripura</option>
+                    <option value="WEST BENGAL">West Bengal</option>
+                    <option value="SIKKIM">Sikkim</option>
+                    <option value="ORISSA">Orissa</option>
+                    <option value="JHARKHAND">Jharkhand</option>
+                    <option value="BIHAR">Bihar</option>
+                    <option value="UTTAR PRADESH">Uttar Pradesh</option>
+                    <option value="UTTARANCHAL">Uttaranchal</option>
+                    <option value="HARYANA">Haryana</option>
+                    <option value="CHANDIGARH">Chandigarh</option>
+                    <option value="DELHI">Delhi</option>
+                    <option value="PUNJAB">Punjab</option>
+                    <option value="HIMACHAL">Himachal</option>
+                    <option value="JAMMU AND KASHMIR">Jammu and Kashmir</option>
+                    <option value="RAJASTHAN">Rajasthan</option>
+                    <option value="MADHYA PRADESH">Madhya Pradesh</option>
+                    <option value="GUJARAT">Gujarat</option>
+                    <option value="DADAR NAGAR HAVELI">Dadar Nagar Haveli</option>
+                    <option value="DAMAN AND DUI">Daman and Dui</option>
+                    <option value="MAHARASHTRA">Maharashtra</option>
+                    <option value="GOA">Goa</option>
+                    <option value="CHATISGARH">Chatisgarh</option>
+                    <option value="ANDHRA PRADESH">Andhra Pradesh</option>
+                    <option value="TAMIL NADU">Tamil Nadu</option>
+                    <option value="PONDICHERRY">Pondicherry</option>
+                    <option value="KARNATAKA">Karnataka</option>
+                    <option value="KERALA">Kerala</option>
+                    <option value="LAKSHADWEEP">Lakshadweep</option>
+                </select>
+
+                <label for="area">Area: <small>(required if rainfall data not available)</small></label>
+                <select id="area" name="area" disabled>
+                    <option value="NA">NA</option>
+                </select>
+
+                <label for="month">Month: <small>(required if rainfall data not available)</small></label>
+                <select id="month" name="month" disabled>
+                    <option value="NA">NA</option>
+                </select>
+
+                <input type="hidden" id="latitude" name="latitude">
+                <input type="hidden" id="longitude" name="longitude">
+
+                <button type="submit" id="bttn">Submit</button>
+            </form>
+        </div>
+        <div id="results-container" class="results-container hidden"></div>
+    </main>
+    <script src="js/script_recommend.js"></script>
+</body>
+</html>

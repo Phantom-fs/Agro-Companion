@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Companion</title>
+    <link rel="icon" type="image/x-icon" href="css/icon.webp">
+    <link rel="stylesheet" href="css/styles_info.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="brand">Agro Companion</div>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="detect.html">Soil Detection</a>
+                <a href="recommend.html">Crop Recommendation</a>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Main content -->
+    <main>
+        <div class="data-container">
+            <h2>Crop Info</h2>
+            <form id="crop-info-form">
+                <label for="crop">Select Crop:</label>
+                <select id="crop" name="crop">
+                    <option value="NA">Select Crop</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Wheat">Wheat</option>
+                    <option value="Maize">Maize (Corn)</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Millets">Millets</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Rubber">Rubber</option>
+                    <option value="Jute">Jute</option>
+                    <option value="Oilseeds">Oilseeds</option>
+                    <option value="Pulses">Pulses</option>
+                    <option value="Pearl Millet (Bajra)">Pearl Millet (Bajra)</option>
+                    <option value="Lentil">Lentil</option>
+                    <option value="Groundnut">Groundnut</option>
+                    <option value="Cocoa">Cocoa</option>
+                    <option value="Tea">Tea</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Flaxseed">Flaxseed</option>
+                    <option value="Coconut">Coconut</option>
+                    <option value="Oil palm">Oil palm</option>
+                    <option value="Clove">Clove</option>
+                    <option value="Black pepper">Black pepper</option>
+                    <option value="Cardamom">Cardamom</option>
+                    <option value="Turmeric">Turmeric</option>
+                </select>
+                <button type="button" id="get-info">Search</button>
+            </form>
+        </div>
+    
+
+    <div class="results-container hidden" id="results-container">
+        <h2>Crop Information</h2>
+        <table id="crop-info-table">
+            <!-- Table content will be dynamically generated -->
+        </table>
+    </div>
+</main>
+    <script src="js/script_info.js"></script>
+</body>
+</html>
