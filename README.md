@@ -4,6 +4,21 @@
 
 Agro Companion is designed to assist farmers and agricultural enthusiasts by classifying different types of soil and providing advanced crop recommendations based on various factors. Users can easily classify different types of soil such as alluvial soil, black soil, red soil, yellow soil, laterite soil, arid soil, and mountain soil. The platform also offers crop recommendations considering factors like soil type, season, rainfall, temperature, humidity, nitrogen, phosphorus, potassium, and specific regional data, and it also provides a tool to access these information for specific crops. If climate data is not available for crop recommendation, the platform fetches the necessary information using a weather API.
 
+```
+This application was developed as part of the research paper titled "An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations" by Farhan Sheth, Priya Mathur, Amit Kumar Gupta, and Sandeep Chaurasia, published in Engineering Applications of Artificial Intelligence.
+```
+
+### Links
+- **Paper**: [An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations](https://doi.org/10.1016/j.engappai.2025.111425)
+- **Server Code**: [Agro Companion Server](https://github.com/Phantom-fs/Agro-Companion-Application-Server)
+- **Dataset**: [Soil Classification Dataset](https://github.com/Phantom-fs/Soil-Classification-Dataset)
+- **Code**: [Development Code (model and recommendation system)](https://github.com/Phantom-fs/Agro-Companion-Modules)
+
+### Abstract
+<blockquote>
+This study introduces an advanced Artificial Intelligence (AI) framework for soil classification and crop recommendation, combining Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) in an ensemble approach, alongside an adaptive fuzzy logic-based decision system for crop suggestions. While existing research typically addresses soil classification or crop recommendation in isolation, this work integrates cutting-edge deep learning models and fuzzy logic to enhance both tasks. The methodology is divided into two phases: Phase 1 covers data collection, preprocessing, and augmentation using Cycle Generative Adversarial Networks (CycleGAN) to expand the curated dataset of 1189 soil images to 8,413, while Phase 2 focuses on training CNN and ViT models, ensembling these models, and developing a fuzzy logic system that considers soil type, nutrients, potential of hydrogen (pH), and climatic conditions for crop recommendations. Experimental results indicate models achieve classification accuracies of up to 89.32 % on the original dataset, improving to 91.01 % with augmented data. On the CycleGAN-augmented (CyAUG) dataset, EfficientNet v2 Large and ViT-Large/16 attain accuracies of 99.60 % and 99.73 %, respectively. Furthermore, an ensemble of these architectures achieves a perfect accuracy of 100 %. The results are also validated by K-fold cross-validation. The research also presents 'Agro Companion,' an AI-powered tool that assists farmers in soil identification and crop selection based on geological and environmental data. This framework addresses key agricultural challenges in India, offering a high-accuracy, practical solution for improving both soil classification and crop recommendation. This research delivers state-of-the-art soil classification performance and a robust AI-based crop recommendation tool to support sustainable agricultural practices.
+</blockquote>
+
 ## Features
 
 - **Soil Classification**: Identify and learn about different types of soil including alluvial, black, red, yellow, arid, and mountain soils.
@@ -27,10 +42,28 @@ Agro Companion is designed to assist farmers and agricultural enthusiasts by cla
 3. **Climate Data Fetching**: If local climate data is not provided, the system uses a weather API to fetch real-time climate data relevant to the user's location.
 4. **Detailed Crop Information**: Users can browse through a database of crops to view detailed growing requirements, including ideal soil type, climate conditions, and nutrient levels.
 
+## Citation
+Please cite the following paper if you use this application in your research or projects:
+
+```bibtex
+@article{SHETH2025111425,
+    title = {An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations},
+    journal = {Engineering Applications of Artificial Intelligence},
+    volume = {158},
+    pages = {111425},
+    year = {2025},
+    issn = {0952-1976},
+    doi = {https://doi.org/10.1016/j.engappai.2025.111425},
+    url = {https://www.sciencedirect.com/science/article/pii/S0952197625014277},
+    author = {Farhan Sheth and Priya Mathur and Amit Kumar Gupta and Sandeep Chaurasia},
+    keywords = {Soil classification, Crop recommendation, Vision transformers, Convolutional neural network, Transfer learning, Fuzzy logic}
+}
+```
+
 ## Developer
 - ***[Farhan Sheth](https://www.linkedin.com/in/farhan-sheth/)***
 
 ----
 
-#### The code for the deployed application server for soil classifcation can be found in the [Agro Companion Soil Server](https://github.com/Phantom-fs/Agro-Companion-Soil-Application-Server).
-#### The code for the deployed application server for crop recommendation and crop information can be found in the [Agro Companion Crop Server](https://github.com/Phantom-fs/Agro-Companion-Crop-Application-Server). 
+#### The code for the deployed application server for soil classifcation can be found in the [Agro Companion Soil Identification Server](https://github.com/Phantom-fs/Agro-Companion-Application-Server/tree/main/Soil-Identification-Server).
+#### The code for the deployed application server for crop recommendation and crop information can be found in the [Agro Companion Crop Recommendation Server](https://github.com/Phantom-fs/Agro-Companion-Application-Server/tree/main/Recommendation-Server). 
