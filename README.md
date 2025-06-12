@@ -4,9 +4,10 @@
 
 Agro Companion is designed to assist farmers and agricultural enthusiasts by classifying different types of soil and providing advanced crop recommendations based on various factors. Users can easily classify different types of soil such as alluvial soil, black soil, red soil, yellow soil, laterite soil, arid soil, and mountain soil. The platform also offers crop recommendations considering factors like soil type, season, rainfall, temperature, humidity, nitrogen, phosphorus, potassium, and specific regional data, and it also provides a tool to access these information for specific crops. If climate data is not available for crop recommendation, the platform fetches the necessary information using a weather API.
 
-```
-This application was developed as part of the research paper titled "An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations" by Farhan Sheth, Priya Mathur, Amit Kumar Gupta, and Sandeep Chaurasia, published in Engineering Applications of Artificial Intelligence.
-```
+<blockquote>
+This application was developed as part of the research paper titled "<em>An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations</em>" by Farhan Sheth, Priya Mathur, Amit Kumar Gupta, and Sandeep Chaurasia, published in <b>Engineering Applications of Artificial Intelligence</b>.
+</blockquote>
+
 
 ### Links
 - **Paper**: [An advanced artificial intelligence framework integrating ensembled convolutional neural networks and Vision Transformers for precise soil classification with adaptive fuzzy logic-based crop recommendations](https://doi.org/10.1016/j.engappai.2025.111425)
@@ -67,3 +68,11 @@ Please cite the following paper if you use this application in your research or 
 
 #### The code for the deployed application server for soil classifcation can be found in the [Agro Companion Soil Identification Server](https://github.com/Phantom-fs/Agro-Companion-Application-Server/tree/main/Soil-Identification-Server).
 #### The code for the deployed application server for crop recommendation and crop information can be found in the [Agro Companion Crop Recommendation Server](https://github.com/Phantom-fs/Agro-Companion-Application-Server/tree/main/Recommendation-Server). 
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This project is a research prototype and is not intended for production use. It is provided "as is" without any warranties or guarantees. Use at your own risk.
